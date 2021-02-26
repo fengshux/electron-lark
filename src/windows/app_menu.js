@@ -18,24 +18,24 @@ let template = [
             //     accelerator: 'CmdOrCtrl+V',
             //     role: 'paste'
             // }, 
-            // {
-            //     label: '重新加载',
-            //     accelerator: 'CmdOrCtrl+R',
-            //     click: function (item, focusedWindow) {
-            //         if (focusedWindow) {
-            //             // on reload, start fresh and close any old
-            //             // open secondary windows
-            //             if (focusedWindow.id === 1) {
-            //                 BrowserWindow.getAllWindows().forEach(function (win) {
-            //                     if (win.id > 1) {
-            //                         win.close()
-            //                     }
-            //                 })
-            //             }
-            //             focusedWindow.reload()
-            //         }
-            //     }
-            // }
+            {
+                label: '重新加载',
+                accelerator: 'CmdOrCtrl+R',
+                click: function (item, focusedWindow) {
+                    if (focusedWindow) {
+                        // on reload, start fresh and close any old
+                        // open secondary windows
+                        if (focusedWindow.id === 1) {
+                            BrowserWindow.getAllWindows().forEach(function (win) {
+                                if (win.id > 1) {
+                                    win.close()
+                                }
+                            })
+                        }
+                        focusedWindow.reload()
+                    }
+                }
+            }
         ]
     },
     {
